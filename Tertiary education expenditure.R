@@ -30,6 +30,7 @@ tertiaryexpsimple <- tertiaryexp[c(2,15)]
 ##Graphs
 
 tertiaryexpsimple %>%
+  filter(Value>0) %>%
   ggplot() +
   geom_bar(aes(x = reorder(Country, Value), y = Value, fill = Value), stat = "identity", 
            position = position_stack(reverse = TRUE)) +  
