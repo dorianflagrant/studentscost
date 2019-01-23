@@ -2,16 +2,14 @@ Coststudent <- read.csv("Data/Cost-by-student.csv",
                          sep = ",",header = TRUE,
                          dec = ".")
 
-Coststudent %>% filter(Education.level.and.programe.orientation == 
-                         "Total tertiary education (ISCED2011 levels 5 to 8)",
-                      Type.of.expenditure == "All expenditure types")
-
-Unemployment <- Unemployment %>% filter(MEASURE = "VALUE")
+##Narrow down to tertiary education, all expenditure types, year 2015 [there was no data for 2016]
 
 Coststudenttertiary <- Coststudent %>% filter(Education.level.and.programe.orientation == 
                                                 "Total tertiary education (ISCED2011 levels 5 to 8)",
                                               Type.of.expenditure == "All expenditure types",
                                               Year == 2015)
+
+##Differentiating ALL institutions / PUBLIC institutions / PRIVATE institutions
 
 CoststudenttertiaryPUB <- Coststudenttertiary %>% filter(Institution.type == "Public educational institutions")
 
