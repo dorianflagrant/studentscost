@@ -30,7 +30,7 @@ CoststudenttertiaryALL %>%
   ggtitle("Cost / Tertiary education student (All)") +
   xlab("OECD countries") +
   ylab("% cost by student in tertiary education in total public expenditure") + 
-  labs(fill = "Cost ($)")
+  labs(fill = "Cost ($)",caption = "Source: OECD")
 
 ##Public institutions
 
@@ -43,7 +43,7 @@ CoststudenttertiaryPUB %>%
   ggtitle("Cost / Tertiary education student (Public institutions)") +
   xlab("OECD countries") +
   ylab("% cost by student in tertiary education in total public expenditure") + 
-  labs(fill = "Cost ($)")
+  labs(fill = "Cost ($)",caption = "Source: OECD")
 
 ##Private institutions
 
@@ -56,5 +56,5 @@ CoststudenttertiaryPRIV %>%
   ggtitle("Cost / Tertiary education student (Private institutions)") +
   xlab("OECD countries") +
   ylab("% cost by student in tertiary education in total public expenditure") + 
-  labs(fill = "Cost ($)")
+  labs(fill = "Cost ($)",caption = "Source: OECD")
 
