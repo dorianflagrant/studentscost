@@ -35,5 +35,8 @@ tertiaryexpsimple %>%
   geom_bar(aes(x = reorder(Country, Value), y = Value, fill = Value), stat = "identity", 
            position = position_stack(reverse = TRUE)) +  
   coord_flip() +
-  theme()
+  ggtitle("Tertiary education expenditure in OECD countries") +
+  xlab("OECD countries") +
+  ylab("% tertiary education expenditure / Total public expenditure") + 
+  labs(fill = "%")
 
